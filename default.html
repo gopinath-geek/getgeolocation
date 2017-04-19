@@ -1,10 +1,18 @@
 <script>
-if ("geolocation" in navigator) {
+/*if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
   console.log(position.coords.latitude);
    console.log(position.coords.longitude);
 });
 } else {
   console.log('Geo location isnot available');
+}*/
+ 
+function showDetails(position) {
+  document.writeln(position.coords.latitude);
+  document.writeln(position.coords.longtitude);
+}
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(showDetails));
 }
 </script>
