@@ -1,3 +1,3 @@
 <?php
 
-echo "page";
+header("Location: default.html");
