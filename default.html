@@ -10,7 +10,7 @@
  
 function showDetails(position) {
   document.writeln(position.coords.latitude);
-  document.writeln(position.coords.longtitude);
+  document.writeln(position.coords.longitude);
 }
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(showDetails);
