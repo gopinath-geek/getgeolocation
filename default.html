@@ -9,11 +9,11 @@
 }*/
  
 function showDetails(position) {
-  document.writeln(position.coords.latitude);
+  document.getElementById("geo").innerHTML = position.coords.latitude;
   document.writeln("long "+position.coords.longitude);
 }
 if ("geolocation" in navigator) {
-  document.getElementById("geo").innerHTML = navigator.geolocation.getCurrentPosition(showDetails);
+  navigator.geolocation.getCurrentPosition(showDetails);
 }else{
   document.write("Geo locaiton not available");
 }
