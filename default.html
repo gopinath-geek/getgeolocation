@@ -14,5 +14,7 @@ function showDetails(position) {
 }
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(showDetails);
+}else{
+  document.write("Geo locaiton not available");
 }
 </script>
