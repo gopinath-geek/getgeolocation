@@ -23,6 +23,7 @@ function watchLocation(successCallback, errorCallback) {
         maximumAge: 5000 // 5 sec.
       });
     } catch (err) {
+      document.write(err);
       errorCallback();
     }
   } else {
