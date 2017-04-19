@@ -11,7 +11,7 @@
 }*/
  
 function showDetails(position) {
-  document.getElementById("info").innerHTML = position.coords.latitude;
+  document.getElementById("info").value = position.coords.latitude;
   //document.writeln("long "+position.coords.longitude);
 }
 if ("geolocation" in navigator) {
