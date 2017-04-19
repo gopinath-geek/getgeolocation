@@ -13,8 +13,9 @@ function showDetails(position) {
   document.writeln("long "+position.coords.longitude);
 }
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(showDetails);
+  document.getElementById("geo").innerHTML = navigator.geolocation.getCurrentPosition(showDetails);
 }else{
   document.write("Geo locaiton not available");
 }
 </script>
+<label id="geo"></label>
