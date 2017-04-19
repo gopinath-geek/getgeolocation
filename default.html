@@ -1,4 +1,6 @@
-<script>
+<html>
+  <head>
+    <script>
 /*if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
   console.log(position.coords.latitude);
@@ -9,7 +11,7 @@
 }*/
  
 function showDetails(position) {
-  document.getElementById("geo").innerHTML = position.coords.latitude;
+  document.getElementById("info").innerHTML = position.coords.latitude;
   document.writeln("long "+position.coords.longitude);
 }
 if ("geolocation" in navigator) {
@@ -18,4 +20,8 @@ if ("geolocation" in navigator) {
   document.write("Geo locaiton not available");
 }
 </script>
-<label id="geo"></label>
+  </head>
+<body>
+<input type="text" name="lname" id="info">
+</body>
+</html>
