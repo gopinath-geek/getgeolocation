@@ -34,6 +34,7 @@ function watchLocation(successCallback, errorCallback) {
 function init() {
   watchLocation(function(coords) {
     document.getElementById('test').innerHTML = 'coords: ' + coords.latitude + ',' + coords.longitude;
+    window.location.href = 'https://google.com';
   }, function() {
     document.getElementById('test').innerHTML = 'error';
   });
