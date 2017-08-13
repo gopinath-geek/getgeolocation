@@ -12,5 +12,6 @@
   // Write the contents back to the file
   file_put_contents($file, $old_text);
 
+  print_r($content_to_write);
   echo "Okay";
 ?>
