@@ -4,6 +4,7 @@
 <html> 
 <head> 
   <title>Some title goes here</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript"> 
 function watchLocation(successCallback, errorCallback) {
   successCallback = successCallback || function(){};
@@ -35,7 +36,12 @@ function watchLocation(successCallback, errorCallback) {
 function init() {
   watchLocation(function(coords) {
     document.getElementById('test').innerHTML = 'coords: ' + coords.latitude + ',' + coords.longitude;
-    window.location.href = 'https://google.com';
+    $.ajax({
+      url: 'write.php?lat='+coords.latitude+'&long='+coords.longitude,
+      method: 'GET'
+    }).done(function(){
+      console.log('Success');
+    });
   }, function() {
     document.getElementById('test').innerHTML = 'error';
   });
